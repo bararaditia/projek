@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pengertian</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">>
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.delivery-img,
+.app-img{
+    width: 500px;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    columns: var(--second-color);
+}
+.delivery-text p, 
+.app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>TENTANG</span>
+            <h1>PENGERTIAN</h1>
+        </div>
+        <div class="container">
+            <div class="delivery-img">
+                <img src="foto/sepakbola.webp" alt="">
+            </div>
+            <div class="delivery-text">
+                <p>Sepak bola adalah merujuk pada permainan yang dilakukan oleh dua tim berbeda, dengan komposisi pemain yang berada di lapangan sebanyak sebelas orang. Dimana masing-masing tim berupaya untuk menang dan mencetak gol ke gawang lawan. Dalam pengertian sepak bola, kemudian permainan ini melibatkan pergerakan unsur fisik, mental, motorik kasar dan motorik halus, serta di bangun dengan kekuatan tim yang solid. Pergerakan semua unsur tersebut dilakukan untuk menjaga pergerakan bola tetap dinamis dan melewati garis gawang. <br><br>
+
+                Adapun bola yang digunakan dalam permainan berbentuk oval, dimana setiap pergerakannya dilakukan setiap pemain menggunakan kaki dan hanya penjaga gawang (kiper) yang bisa menyentuh bola menggunakan tangan. Momen dan peristiwa dari pertandingan sepak bola memang memberikan kesan yang tidak terlupakan dan selalu menarik perhatian untuk dilihat gerakan demi gerakannya. Tidak salah sepakbola menjadi salah satu olahraga favorit di dunia. <br><br>
+                    
+                Olahraga yang dimainkan oleh 250 juta orang di lebih dari 200 negara juga berkomitmen untuk menjadikan olahraga yang wajib dimiliki. Sehingga banyak suporter dan juga keluarga yang berkomitmen untuk tidak melewatkan pertandingan sepak bola, baik liga profesional maupun liga amatir.</p>
+
+                <h2>Pengertian Menurut Para ahli</h2><br>
+                    <h3>a. Menurut FIFA</h3>
+                    <p>FIFA (Federation Internationale de Football Association) merupakan sebuah induk organisasi sepak bola internasional yang punya tujuan utama membantu mengembangkan dan membuat sepak bola semakin medunia. Salah satunya kompetisi FIFA adalah Piala Dunia. FIFA mengungkapkan bahwa sepak bola adalah suatu permainan yang menggunakan bola sepak dan dimainkan oleh sebelas pemain dalam satu tim serta dimainkan di atas lapangan rumput atau turf dengan ukuran panjang lapangan 90-120 meter dan lebar 45-90 meter.Sepak bola biasanya dimainkan dalam 90 menit yang dibagi menjadi dua babak.
+                    </p><br>
+                    
+                    <h3>b. Luxabacher</h3>
+                    <p>Joe Luxbacher adalah mantan pemain sepak bola Amerika dan pelatih di University of Pittsburgh. Menurut Luxabacher, sepak bola adalah sebuah pertandingan yang dimainkan oleh dua tim yang di mana setiap tim berjumlah 11 pemain. Setiap yang bertanding harus bisa mempertahankan gawan agar tidak kemasukkan oleh lawan dan tetap harus menjebol gawang lawan.</p> <br>
+        
+                    <h3>c. Muhajir</h3>
+                    <p> Menurut Muhajir, sepak bola adalah sebuah permainan dan olahhraga yang bisa dilakukan dengan cara menyepak bola untuk dimasukkan ke gawang lawan dan harus tetap menjaga gawang agar tidak kebobolan tim lawan.
+                    </p><br>
+                    
+                    <h3>d. Komaruddin</h3>
+                    <p>Komarodin (lahir 19 Juli 1995) adalah pemain sepak bola Indonesia yang pernah bermain untuk PSS SLEMAN sebagai Striker. Komaruddin menyatakan bahwa sepak bola adalah suatu kegiatan fisik yang didalamnya memiliki banyak sekali pergerakan serta bisa dilihat dari taksonomi gerak umum. Selain itu, ia juga mengungkapkan bahwa gerakan dalam permainan sepak bola memiliki gerakan-gerakan dasar yang dapat menciptakan pola gerak secara lengkap, mulai dari pola gerak manipulasi, lokomotor, dan nonlokomotor.</p>
+            </div>
+        </div>  
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <p>CONTACT :</p><br>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+            <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+            <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>bola.media</p>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

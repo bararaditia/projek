@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teknik dasar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">>
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.delivery-img,
+.app-img{
+    width: 460px;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text img{
+    width: 300px;
+    margin: 30px;
+}
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    columns: var(--second-color);
+}
+.delivery-text p, 
+.app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>TENTANG</span>
+            <h1>TEKNIK DASAR PERMAINAN SEPAKBOLA</h1>
+        </div>
+        <div class="container">
+            <div class="delivery-img">
+                <img src="foto/bolbola.jpg" alt="">
+            </div>
+            <div class="delivery-text">
+                <h2>Teknik Dasar</h2>
+                <p>Teknik dalam sepak bola menjadi salah satu elemen yang paling jelas dan terlihat dalam permainan sepakbola. Kemampuan dalam teknik sepak bola akan berpengaruh besar terhadap kemenangan tim. Berikut adalah teknik-teknik sederhana yang perlu dikuasai sebelum melakukan permainan :</p><br>
+            
+                  <h3>a. Teknik Dasar Mengoper Bola (Passing)</h3>
+                  <p>Keterampilan akurasi passing, Akurasi operan mengacu pada kemampuan pemain menggunakan kedua kaki untuk mengirim bola ke tujuan yang diinginkan pemain. Hal ini bisa berarti mengirim bola langsung ke kaki rekan satu tim dengan kekuatan dan presisi, mengirimkan umpan terobosan lambung atau mengumpan dan memainkan bola secara akurat di depan gawang.
+                  
+                  Ada beberapa teknik passing (operan) yang baik agar bola dapat terakurasi dan sampai di kaki teman tanpa direbut oleh tim lawan, Berikut beberapa teknik passing :</p>
+                
+                  <h4>1). teknik passing dengan kaki bagian dalam</h4>
+                  <p>
+                    Teknik passing dengan kaki bagian dalam ini memiliki tingkat akurasi yang lebih baik dan cocok untuk dipakai di operan jarak pendek. Memiliki kecepatan sedang dan bola kecil kemungkinan akan melambung tinggi, sehingga rekan kita pun semakin mudah menerima operan kita.</p>
+                  
+                  <h4>2). teknik passing dengan kaki bagian luar</h4>
+                  <p> Tipe passing yang kedua adalah outside of the foot atau mengoper dengan bagian luar kaki. Teknik ini perlu sering latihan agar akurasinya tepat. Karena agak lebih susah dengan jenis passing yang pertama.
+                  
+                    Kelebihan dari passing jenis ini adalah dipakai buat passing tipuan agar bola tidak direbut oleh tim lawan.
+                    </p>
+            
+                  <h4>3). teknik passing dasar sepak bola</h4>
+                  <p>Teknik passing instep drive dipakai untuk passing jarak jauh. Posisi tendangan berada di bagian tengah agak kebawah, sehingga bola bisa mencapai terget yang jauh.
+                  
+                  Pemain harus memperhatikan titik ini dan harus menggunakan feeling agar bola sampai di rekan kita. Anda dapat mengayunkan tangan untuk menjaga keseimbangan.</p>
+                  
+                  <h4>4). Chip pass / teknik passing-kick-point</h4>
+                  
+                  <p>Teknik passing dalam sepak bola selanjutnya adalah chip pass. Teknik ini dipakai untuk dapat mencapai titik umpan yang terhadang oleh lawan dengan melambungkan bola.
+                  
+                    Teknik ini bisa dipakai untuk jarak pendek maupun jangka pendek, hanya saja jarak antara kita dengan lawan harus agak jauh agar bola tidak berhenti dan terkena tubuh lawan.</p><br>
+            
+                  <h3>b. Teknik Dasar Menghentikan Bola / Menerima Bola</h3>
+                 <p> Teknik dasar bermain sepak bola selanjutnya adalah menghentikan / menerima bola. Teknik ini penting untuk dikuasai agar bola tidak mantul lagi dan direbut oleh lawan. Untuk itu perlu keahlian dalam menerima bola. Berikut adalah teknik-tekniknya :</p>
+                  
+                  <h4>1) Menggunakan kaki bagian bawah / telapak kaki</h4>
+                  <p>Teknik yang pertama adalah menggunakan telapak kaki dan ketika bola akan sampai gerakannya seperti menginjak bola dengan kaki yang sedikit terangkat dan lutut tertekuk. Agar terjadi dengan mulus, pastikan mata juga fokus dan tertuju pada arah datangnya bola.</p>
+                  
+                  <h4>2) Menggunakan kaki bagian dalam</h4>
+                  <P>Seperti saat mengoper bola, kaki bagian dalam juga bisa dipakai untuk menghentikan bola. Saat bola mau sampai, kaki juga bergerak mengikuti arah gerakan bola agar bola tidak terpantul dan bisa mendarat dengan sempurna.
+                  </P>
+            
+                  <h4>3. Menahan bola dengan kaki bagian luar</h4>
+                  <p>Bagian luar juga bisa dipakai untuk menahan bola, namun teknik ini lebih sulit dilakukan ketimbang teknik yang pertama dan kedua. Namun lebih efektif dari segi kecepatan, pemain bisa langsung menghentikan bola terus dribbling dan lanjut untuk menyerang.</p><br>
+                  
+                  <h3>c. Menggiring (Dribling) Bola</h3>
+                  <p>Keterampilan menggiring bola, dimana keterampilan ini berkaitan dengan kontrol penuh terhadap bola. Dribbling, manuver, dan membawa bola dalam kecepatan tinggi adalah kunci sukses sebelum mencetak gol.
+                  </p>
+            
+                  <h4>1). Dribbling dengan menggunakan sisi kaki bagian dalam</h4>
+                  <p>Dribbling yang pertama adalah menggunakan sisi kaki bagian dalam. Caranya adalah dengan menyentuh bola dengan sisi kaki bagian dalam dan posisi kaki adalah tegak lurus terhadap bola.
+                  
+                  Kemudian bola ditendang pelan guna mempertahankan kontrol bola. Jangan lupa juga pusatkan kekuatan tendangan pada bagian tengah bola sehingga memudahkan dalam mengontrol bola.
+                    </p>
+            
+                  <h4>2). Dribbling dengan sisi kaki bagian luar</h4>
+                 <p> Keterampilan mengontrol bola ini digunakan ketika pemain yang menguasai bola sedang berlari dan mendorong bola sehingga bisa mempertahankan bola tersebut tetap berada di sisi luar kaki.</p>
+                  
+                  <h4>3). Dribbling menggunakan kura-kura kaki</h4>
+                  <p>Teknik dribbling selanjutnya adalah menggunakan kura-kura kaki. Teknik ini dibilang lebih enak dan bisa dipakai untuk dribbing dengan kecepatan tinggi (lari).</p> <br>
+                  
+                  <h3>d. Mengontrol Bola</h3>
+                 <p> Mengontrol bola, hal ini berkaitan dengan pengendalian bola yang berkaitan dengan penguasaan seluruh bagian tubuh terkecuali tangan dalam memainkan dan mengatur keberadaan bola agar tetap stabil di antara bagian tubuh.
+                  
+                  Dengan kontrol bola yang baik seseorang dapat menerima operan dan melakukan operan baik lambung maupun datar. Selain itu kontrol bola adalah kemampuan mempertahankan penguasaan bola dan melindungi dari lawan.</p><br>
+                  
+                  
+                  <h3>e. Kontrol Tubuh</h3>
+                  <p>Kelima, yang tidak kalah penting adalah kontrol tubuh, dimana kemampuan pemain menggerakkan tubuhnya dengan lancar saat pertandingan, juga mengoptimalkan keseimbangan. Mengontrol tubuh saat pertandingan berkaitan dengan langkah yang tepat, lari yang seimbang, dan keseimbangan gravitasi ketika melakukan lompatan.</p>
+                  </div>
+            </div>
+        </div>  
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <p>CONTACT :</p><br>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+            <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+            <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>bola.media</p>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

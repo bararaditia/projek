@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manfaat</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">>
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.delivery-img,
+.app-img{
+    width: 460px;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text img{
+    width: 300px;
+    margin: 30px;
+}
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    columns: var(--second-color);
+}
+.delivery-text p, 
+.app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>TENTANG</span>
+            <h1>MANFAAT DARI SEPAKBOLA</h1>
+        </div>
+        <div class="container">
+            <div class="delivery-img">
+                <img src="foto/bolbola.jpg" alt="">
+            </div>
+            <div class="delivery-text">
+                <p>
+                    Permainan yang populer dan asik ini sifatnya kompetitif, bahkan ada sebagian orang yang melakukan olahraga sepak bola ini hanya untuk mendapatkan kesenangan. Meskipun alasannya hanya untuk kesenangan, ternyata kehadiran sepak bola memberikan manfaat positif bagi kesehatan. Berikut manfaat dari sepak bola:</p><br>
+                    
+                    <h3>a. Menambah kebugaran dan stamina</h3>
+                    <p>Menambah Stamina dimana kombinasi lari, jalan kaki, lari cepat dan menendang dapat memberikan peningkatan stamina, peningkatan kesehatan jantung, penurunan lemak tubuh, peningkatan kekuatan dan tonus otot, peningkatan kekuatan tulang, dan peningkatan koordinasi</p><br>
+                    
+                    <h3>b. Meningkatkan kerja tim dan sosial</h3>
+                    <p>Manfaat sepak bola berikutnya adalah manfaat sosial. Manfaat sosial sepak bola adalah meningkatkan kerja tim, bermain sepak bola juga akan dikaitkan dengan sifat kepemimpinan, dan berteman baik dengan bermain sepak bola. Meningkatkan aktivitas kerja tim adalah keterampilan penting.</p><br>
+                    
+                   <h3> c. Baik untuk kesehatan mental</h3>
+                    <p>Dilansir dari portal Footbal Talk bahwa dengan berolahraga termasuk melakukan sepak bola dapat memberikan manfaat terhadap kesehatan mental. Dimana Olahraga teratur juga dianggap dapat membantu memperbaiki masalah-masalah kesehatan mental seperti depresi dan stres, dapat meningkatkan kepercayaan diri dan harga diri, serta dapat membantu mengurangi kecemasan.
+                    
+                    Sudah lama terbukti bahwa para atlet memiliki harga diri dan kepercayaan diri yang lebih tinggi dibandingkan dengan rekan-rekannya. Ini sangat penting, terutama bagi remaja yang sering mengalami perubahan suasana hati yang drastis dan mungkin mengalami stres. Dengan membangun kepercayaan diri, melalui olahraga sepak bola membantu meredakan stres dan kecemasan.</p><br>            
+                    
+                    <h3>d. Baik untuk kognisi</h3>
+                    <p>Tidak banyak yang mengetahui hal ini, tetapi bermain sepak bola memiliki pengaruh yang signifikan terhadap fungsi kognitif otak seseorang. Karena ini adalah permainan strategis yang membutuhkan pengambilan keputusan cepat, sepak bola meningkatkan ketekunan, disiplin diri, dan konsentrasi. Siswa yang mengikuti olahraga umumnya menunjukkan prestasi yang lebih baik di sekolah</p><br>
+                    
+                    <h3>e. Membantu problem solving anak</h3>
+                    <p>>Bermain sepak bola untuk anak-anak usia sekolah dapat membantu membangun keterampilan pemecahan masalah yang kuat. Pemain harus bisa menyelesaikan masalah dengan rekan satu tim dan lawan mereka untuk menjadi yang teratas. Sementara Anda menguji keterampilan pemecahan masalah Anda yang sedikit, Anda belajar bagaimana menemukan resolusi untuk masalah-masalah kecil. Dalam jangka panjang, Anda akan mendapat banyak manfaat dengan bermain sepak bola di masa remaja Anda.</p>
+                  </div>
+            </div>
+        </div>  
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <p>CONTACT :</p><br>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+            <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+            <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>bola.media</p>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

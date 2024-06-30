@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 150px 0 30px 0;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.small-img-row{
+  display: flex;
+  margin-top: 20px 0;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  width: 100%;
+}
+.small-img{
+  position: relative;
+}
+.small-img img{
+  width: 250px;
+  margin-left: 80px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 1px #0f0f0f;
+  float: left; 
+}
+.small-img-row p{
+  margin-left: 20px;
+  color: #0f0f0fcb;
+  font-size: 20px;
+  font-weight: 600;
+}
+.small-img i{
+  font-size: 20px;
+  color: #EEEEEE;
+  width: 100px;
+  position: absolute;
+  left: 74%;
+  top: 46%;
+  transform: translate(-50%,-50%);
+  cursor: pointer;
+}
+.video-player{
+  width: 60%;
+  position: fixed;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 20px;
+  display: none;
+}
+.video-player:hover{
+  background-color: rgba(255, 255, 255, 0.10);
+}
+video:focus{
+  outline: none;
+}
+video{
+  border-radius: 30px;
+} 
+.video-player i{
+  position: absolute;
+  font-size: 23px;
+  top: 20px;
+  right: 10px;
+  width: 30px;
+  cursor: pointer;
+  color: white;
+}
+.contact{
+    margin-top: -90px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }  
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+    .home-text span{
+        font-size: 0.9rem;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .shop-container{
+        margin-top: 0rem;
+    }
+    .shop-container .box{
+        margin-top: 10rem;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 472px) {
+    .box{
+        font-size: 11px;
+        padding: 10px;
+    }
+    .box img{
+        width: 65px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>VIDEO</span>
+            <h1>TENTANG SEPAK BOLA</h1>
+        </div>
+        <div class="container"></div>
+    </section>
+
+    <!-- content -->
+    <div class="col">
+        <div class="small-img-row">
+          <div class="small-img">
+              <img src="foto/youtube1.jpg" width="100%">
+              <i class="fa-solid fa-play" onclick="playVideo('Video/Teknik Dasar dan Peran Pemain dalam Sepakbola __ Materi Sepakbola.mp4')"></i>
+         </div>
+          <p>Teknik Dasar dan Peran Pemain dalam Sepakbola || Materi Sepakbola</p>
+        </div>
+        <div class="small-img-row">
+          <div class="small-img">
+              <img src="foto/youtube1.jpg" width="100%">
+              <i class="fa-solid fa-play" onclick="playVideo('Video/Latihan Teknik Dasar Passing- SZChanel.mp4')"></i>
+          </div>
+              <p>Latihan Teknik Dasar Passing!</p>
+        </div>
+        <div class="small-img-row">
+          <div class="small-img">
+              <img src="foto/youtube1.jpg" width="100%">
+              <i class="fa-solid fa-play" onclick="playVideo('Video/[VIDEO PEMBELAJARAN PENJAS] TEKNIK DASAR PERMAINAN SEPAK BOLA.mp4')"></i>
+          </div>
+          <p>[VIDEO PEMBELAJARAN PENJAS] TEKNIK DASAR PERMAINAN SEPAK BOLA</p>
+        </div>
+        <div class="small-img-row">
+          <div class="small-img">
+              <img src="foto/youtube1.jpg" width="100%">
+              <i class="fa-solid fa-play" onclick="playVideo('Video/LATIHAN TEKNIK DASAR SHOOTING & FINISHING ASIOP BERSAMA SYAMSIR ALAM _ PART 1.mp4')"></i>
+          </div>
+          <p>LATIHAN TEKNIK DASAR SHOOTING & FINISHING</p>
+        </div>
+        <div class="small-img-row">
+          <div class="small-img">
+              <img src="foto/youtube1.jpg" width="100%">
+              <i class="fa-solid fa-play" onclick="playVideo('Video/3 CARA CONTROL SEPAK BOLA _ Tutorial.mp4')"></i>
+          </div>
+          <p>3 CARA CONTROL SEPAK BOLA _ Tutorial</p>
+        </div>
+      </div>    
+
+      <div class="video-player" id="videoPlayer">
+        <video width="100%" controls autoplay id="myVideo">
+          <source src="media/vidl.mp4" type="video/mp4">
+        </video>
+        <i class="fa-solid fa-circle-xmark" onclick="stopVideo()"></i>
+      </div>
+
+
+
+
+
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <p>CONTACT :</p><br>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+                <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+                <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+            </div>
+        </section>
+        <footer>
+            <p>bola.media</p>
+        </footer>
+
+
+        <script src="main.js"></script>
+
+        <script>
+            var videoPlayer = document.getElementById("videoPlayer");
+            var myVideo = document.getElementById("myVideo");
+        
+            function stopVideo(){
+              videoPlayer.style.display = "none";
+            }
+        
+            function playVideo(file){
+              myVideo.src = file;
+              videoPlayer.style.display = "block"
+            }
+          </script>
+</body>
+</html>

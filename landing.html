@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing</title> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        section{
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+        header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo{
+            position: relative;
+            max-width: 60px;
+            margin-top: 4px;
+            align-items: center;
+        }
+        header ul{
+            position: relative;
+            display: flex;
+        }
+        header ul li{
+            list-style: none;
+        }
+        header ul li a{
+            display: inline-block;
+            color: #ffffff;
+            background: #134a91;
+            padding: 8px 18px;
+            font-weight: 400;
+            border-radius: 50px;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+        header ul li a.login{
+            display: inline-block;
+            border: 1px solid #134a91;
+            color: #134a91;
+            background: #ffffff;
+            padding: 8px 25px;
+            font-weight: 400;
+            border-radius: 50px;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+        header ul li a.login:hover{
+            display: inline-block;
+            border: 1px solid #134a91;
+            color: #ffffff;
+            background: #134a91;
+            padding: 8px 25px;
+            font-weight: 400;
+            border-radius: 50px;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+
+        /* content */
+        .content{
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .content .textBox{
+            position: relative;
+            max-width: 600px;
+        }
+        .content .textBox h2{
+            color: #333;
+            font-size: 3em;
+            line-height: 1.4em;
+            font-weight: 600;
+        }
+        .content .textBox h2 span{
+            color: #134a91;
+            font-size: 1.2em;
+            font-weight: 900;
+        }
+        .content .textBox p{
+            color: #333;
+            font-size: 15px;
+        }
+        .content .textBox a{
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #134a91;
+            color: #fff;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+        .content .imgBox{
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+        }
+        .content .imgBox img{
+            max-width: 340px;
+        }
+        
+        .content .imgBox img{
+        animation: animate 3s linear infinite;
+        }
+        @keyframes animate{
+            0%{
+                transform: translate(-11px, 0);
+            }
+            50%{
+                transform: translate(-0px, -11px);
+            }
+            100%{
+                transform: translate(-11px, 0);
+            }
+        }
+        /* contact */
+        .sci{
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translate(-50%);
+            display: flex;
+        }
+        .sci li{
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        .sci li:hover{
+            transform: translateY(-15px);
+        }
+        .sci li a{
+            display: inline-block;
+            margin: 5px 0;
+            transform: scale(0.6);
+        }
+
+        /* warna
+        .circle{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #134a91;
+            clip-path: circle(800px at left);
+        } */
+
+        /* responsive */
+        @media (max-width:991px) {
+            header{
+                padding: 20px;
+            }
+            header .logo{
+                max-width: 60px;
+            }
+            header ul{
+                display: none;
+            }
+            .toggle{
+                position: relative;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                background: url(foto/menu.png);
+                background-size: 30px;
+                background-position: center;
+                background-repeat: no-repeat;
+                filter: invert(1);
+                z-index: 11;
+            }
+            .toggle.active{
+                position: fixed;
+                right: 20px;
+                background: url(foto/close.png);
+                background-size: 25px;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            header ul.navigation.active{
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background: #fff;
+                z-index: 10;
+            }
+            header ul li a{
+                font-size: 1.5em;
+                margin: 5px 0;
+            
+            }
+            header ul li a.login,
+            header ul li a.login:hover{
+                font-size: 1.5em;
+                margin: 5px 0;
+                margin-right: 3px;
+            }
+            section{
+                padding: 20px 20px 120px;
+            }
+            .content{
+                flex-direction: column;
+                margin-top: 100px;
+            }
+            .content .textBox h2{
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+            .content .textBox{
+                max-width: 100%;
+            }
+            .content .imgBox{
+                max-width: 100%;
+                justify-content: center;
+            }
+            .content .imgBox img{
+                max-width: 250px;
+                margin-left: 70px;
+            }
+            .circle{
+                clip-path: circle(400px at center bottom);
+            }
+        }
+
+    </style>
+    
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <!-- navbar -->
+        <header>
+            <a href="#"><img src="foto/bolamedia.png"  class="logo"></a>
+            <div class="toggle" onclick="toggleMenu();"></div>
+            <ul class="navigation">
+                <li><a href="logreg.php" class="login">LOGIN</a></li>
+                <li><a href="logreg.php">SIGN UP</a></li>
+            </ul>
+        </header>
+
+        <!-- content -->
+        <div class="content">
+            <div class="textBox">
+                <h2>Website<br><span>BOLA MEDIA</span></h2>
+                <p>Di Bola Media, kami percaya bahwa pendidikan adalah kunci untuk sukses. Oleh karena itu, kami telah berkomitmen untuk memberikan pengalaman pembelajaran online yang terbaik dan paling terjangkau bagi Anda. Dengan akses materi pembelajaran, khususnya materi tentang olahraga sepakbola. Bola Media adalah tempat yang sempurna bagi siapa saja yang ingin meningkatkan pengetahuan mereka, dan mengembangkan keterampilan mereka.</p>
+                <a href="logreg.php">learn more</a>
+            </div>
+            <div class="imgBox">
+                <img src="foto/bolacincin.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><img src="foto/facebook.png"></a></li>
+            <li><a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><img src="foto/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/baraa.radtyaa/"><img src="foto/instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sejarah</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.delivery-img,
+.app-img{
+    width: 460px;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    columns: var(--second-color);
+}
+.delivery-text p, 
+.app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>TENTANG</span>
+            <h1>SEJARAH PERMAINAN SEPAKBOLA</h1>
+        </div>
+        <div class="container">
+            <div class="delivery-img">
+                <img src="foto/bersama.jpg" alt="">
+            </div>
+            <div class="delivery-text">
+                <p>
+                    Setelah mengetahui pengertian sepak bola, bagiamana sejarah sepak bola hingga populer hingga sekarang? Berdasarkan sumber yang dikutip pada situs Football History, kehadiran Permainan sepak bola terjadi di China sekitar abad ke-3 dan 2 SM dengan nama permainan Cuju. Dimana Cuju dimainkan dengan bentuk bola bundar di atas bidang tanah persegi. Banyak negara-negara yang mengklaim bahwa kehadiran sepak bola diawali dari mereka sendiri, seperti Yunani Kuno dan Roma. <br><br>
+                    
+                    
+                    Namun cerita yang banyak diakui permainan sepak bola populer pada abad ke-12, dimana pada abad ini sepak bola dimainkan di padang rumput dan jalanan Inggris. Seiring berjalannya waktu kemudian bermunculan klub sepak bola akan tetapi kehadiran Klub sepak bola yang diyakini ada sejak abad ke-15 tersebut terorganisir dengan baik dan tanpa status resmi. <br><br>
+                    
+                    Oleh karena itu cukup sulit untuk menentukan klub sepak bola yang pertama hadir di muka bumi ini. Beberapa sejarawan Inggris mempercayai bahwa terdapat klub profesional yang di bentuk di Inggris pada tahun 1862 dengan nama klub Inggris Notts County. Setahun kemudian sepak bola modern lahir pada tahun 1863 ketika Asosiasi Sepak Bola Inggris didirikan. <br><br>
+                    
+                    Sejak setelah itu pada tahun 1883 dilangsungkan turnamen internasional pertama yang melibatkan empat negara yaitu Inggris, Irlandia, Skotlandia, dan Wales. <br>
+                    
+                    Meskipun sepakbola menjadi fenomena yang dan digandrungi dari Inggris, perlahan menyebar ke negara-negara Eropa lainnya. Pertandingan pertama pada tahun 1867 yang berlangsung di luar Eropa yaitu di Argentina. <br>
+                    
+                    
+                    Tepatnya pada 21 Mei 1904 Federation International Football Association (FIFA) didirikan, yang ditandatangani oleh tujuh negara yaitu Prancis, Belgia, Denmark, Belanda, Spanyol, Swedia dan Swiss.<br>
+                    
+                    Meskipun Inggris identik dengan sejarah perkembangan sepak bola, akan tetapi mereka tidak turut serta bergabung sejak awal. Tetap saja, mereka bergabung pada tahun berikutnya.<br><br>
+                    
+                    
+                    Semakin digandrunginya olahraga sepak bola diprekuat dengan dimasukkannya sebagai olahraga resmi dalam olimpiade pada tahun 1908. Serta Piala dunia yang dilaksanakan pertama pada tahun 1930 semakin memperkuat olahraga yang sangat populer di kancah internasional. Hingga kemudian pada tahun 1996 sepak bola wanita ditambahkan untuk pertama kalinya.</p>
+            </div>
+        </div>  
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <p>CONTACT :</p><br>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+            <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+            <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>bola.media</p>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

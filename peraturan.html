@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>peraturan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">>
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.heading{
+    text-align: center;
+    margin-top: 100px;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.container{
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+.delivery-img,
+.app-img{
+    width: 460px;
+}
+.delivery-text,
+.app-text{
+    flex: 1 1 21rem;
+}
+.delivery-text img{
+    width: 300px;
+    margin: 30px;
+}
+.delivery-text h2,
+.app-text h2{
+    font-size: 1.2rem;
+    columns: var(--second-color);
+}
+.delivery-text p, 
+.app-text p{
+    margin: 0.5rem 0 1rem;
+    text-align: justify;
+}
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>TENTANG</span>
+            <h1>PERATURAN DALAM PERMAINAN SEPAKBOLA</h1>
+        </div>
+        <div class="container">
+            <div class="delivery-img">
+                <img src="foto/bolbola.jpg" alt="">
+            </div>
+            <div class="delivery-text">
+                <p>
+                    Sebagai salah satu olahraga tertua di dunia juga yang paling banyak diminati untuk ditonton. Saat ini, game tersebut dimainkan di seluruh dunia oleh jutaan orang, dengan miliaran supporter. Tidak heran sepakbola hadir dalam berbagai konsep pertandingan, seperti Piala Dunia. <br><br>
+                    
+                    Selain itu terdapat turnamen-turnamen Euro Championships, Copa America dan Piala Afrika. Selain itu liga terkuat di Inggris (Liga Utama Inggris), Spanyol (La Liga), Italia (Serie A) dan Jerman (Bundesliga). DI tanah air Indonesia (Liga 1) sebagai liga terkuat.<br><br>
+          
+                    Melihat antusias penduduk dunia terhadap sepak boleh harus berbarengan dengan aturan main, FIFA sebagai organisasi Internasional yang menaungi olahraga ini telah mengeluarkan aturan baku. Ketika kita berbicara soal pengertian sepak bola, selain bentuk permainan, maka kita juga perlu membicarakan soal bentuk peraturan dalam permainan ini. Dimana aturan ini disebut sebagai Law of the Game yang menurut mereka berlaku untuk semua pertandingan baik tingkat internasional maupun pertandingan antara anak-anak kecil di desa terpencil.<br><br>
+                  
+                    Menurut mereka Bahwa Hukum harus berlaku sama di setiap pertandingan di setiap konfederasi, negara, kota dan desa di seluruh dunia. Karena dengan aturan yang diberlakukan dalam pertandingan adalah kekuatan besar yang harus dipertahankan demi kebaikan.<br><br>
+          
+                    Dalam dokumen Law of the Game mereka memiliki filosofi dan spirit of the law dimana “pertandingan terbaik adalah pertandingan dimana wasit jarang dibutuhkan karena permainan penuh dengan rasa hormat satu sama lain”.<br><br>
+          
+                    Pedoman ini adalah satu-satunya hukum sepak bola yang dianut oleh badan olahraga FIFA. Dalam aturan tersebut terdapat 17 pasal yang berlaku untuk pertandingan dimana aturan-aturan yang berkaitan dengan jumlah pemain yang harus dimiliki suatu tim, durasi pertandingan, ukuran lapangan dan bola, jenis dan sifat pelanggaran yang dapat diadili wasit, dan banyak aturan lain berkaitan dengan prinsip sepak bola.<br><br>
+          
+                    Selama pertandingan, merupakan tugas wasit untuk menafsirkan dan menegakkan “prinsip” dalam permainan. Akan tetapi, secara umum dalam pertandingan sepak bola memiliki tujuan untuk mencetak sebanyak-banyaknya gol daripada lawan.<br><br></p>
+         
+                    <h3>a. Peraturan Tentang Gol Yang Sah</h3>
+                    <img class="gol" src="foto/sah.jpg" alt="">
+                    <p>Dimana aturan Pertama yang perlu diperhatikan adalah untuk memenangkan pertandingan bola harus masuk ke gawang lawan. Setiap tendangan yang mengarah ke gawang lawan harus diakhiri dengan melewati garis agar bisa menjadi gol yang sah. Gol dapat dicetak dengan bagian tubuh manapun selain dari tangan atau lengan hingga ke bahu. Tim yang mencetak gol paling banyak dinyatakan sebagai tim pemenang. Gol baru dinyatakan sah apabila bola melewati garis gawang dengan tendangan atau sundulan kepala, bukan lemparan atau pukulan tangan.<br><br></p>
+          
+                    <h3>b. Peraturan Tentang Waktu Permainan</h3>
+                    <img src="foto/45.jpg" style="border-radius: 20px;" alt="">
+                    <p>Aturan umum yang perlu diperhatikan adalah waktu yang berlaku selama pertandingan adalah selama 90 menit. Selama pertandingan akan dibagi menjadi dua bagian, 45 menit pertama kemudian akan mengambil waktu selama 15 menit untuk melanjutkan permainan kedua selama 45 menit.<br><br>
+          
+                    Ketika permainan berakhir imbang selama 90 menit berikut dengan tambahannya makan akan dilanjutkan adu penalti untuk  menentukan pemenang. Dimana penalti ini dilakukan dalam kotak penalti dengan menendang bola ke arah gawang lawan.<br><br></p>
+          
+                    <h3>c. Peraturan Tentang Jumlah Pemain</h3>
+                    <img src="foto/squad.jpg" alt="">
+                    <p>Aturan selanjutnya adalah jumlah pemain dalam setiap tim sebanyak 11 pemain. Terdiri sepuluh pemain lapangan dan satu penjaga gawang. Setiap tim dapat menyediakan hingga 7 pemain pengganti.<br>
+          
+                    Pergantian pemain dapat dilakukan kapan saja dalam pertandingan dengan masing-masing tim dapat melakukan maksimal 3     pergantian pemain per sisi. Selain itu para pemain harus memakai equipment (peralatan) seperti mengenakan sepatu bola, bantalan tulang kering, dan jersey yang serasi. Selain itu penjaga gawang juga akan mengenakan sarung tangan empuk.<br>
+          
+                    Dari setiap tim akan di tunjuk satu kapten, dimana kapten yang nantinya akan memakai karet kapten.</p><br><br>
+          
+                    <h3>d. Peraturan Wasit dan Pemberian Kartu</h3>
+                    <img src="foto/sit.jpg" alt="">   
+                    <p>Setiap pertandingan harus menyertakan satu wasit dan dua asisten wasit (hakim garis). Tugas wasit adalah bertindak sebagai penjaga waktu dan membuat keputusan apa pun yang mungkin perlu dibuat seperti pelanggaran, tendangan bebas, lemparan ke dalam, penalti, dan ditambahkan tepat waktu di akhir setiap babak.<br>
+          
+                    Wasit dapat berkonsultasi dengan asisten wasit kapan saja dalam pertandingan mengenai keputusan. Merupakan tugas asisten wasit untuk menentukan offside dalam pertandingan (lihat di bawah), melempar ke dalam untuk salah satu tim dan juga membantu wasit dalam semua proses pengambilan keputusan jika sesuai.<br><br>
+          
+                    Untuk pelanggaran yang dilakukan seorang pemain dapat diganjar dengan kartu kuning atau kartu merah tergantung tingkat pelanggaran yang dilakukan.<br>
+                    
+                    Keputusan ini biasanya dilakukan atas dasar kebijakan wasit. Kedua kartu tersebut memiliki arti yang berbeda dimana kuning sebagai tanda peringatan, sedangkan kartu merah adalah hukuman untuk pemain yang melakukan pelanggaran berat biasanya ditandai dengan keluarnya pemain dari lapangan hijau.<br>
+          
+                    Selain itu dua kartu kuning sama artinya dengan satu kartu merah. Kerugian bagi tim ketika terdapat salah satu pemain yang diganjar kartu merah, pasalnya secara otomatis mereka akan kehilangan satu pemain.</p><br><br>
+          
+                    <h3>e. Peraturan Lapangan</h3>
+                    <img src="foto/lapangan.jpg" alt="">
+                    <p>Lapangan harus terbuat dari rumput buatan atau alami dimana semua wilayah di dalam garis putih pada lapangan adalah arena pertandingan. Sebetulnya aturan lapangan sepak bola ada dalam Law of the Game (LOTG), lebih tepatnya di pasal 1. Lapangan sepak boleh berbentuk persegi dan memiliki empat sisi diantaranya sisi kanan dan kiri yang disebut sebagai garis lapangan, sedangkan sisi lain yaitu lebar lapangan disebut sebagai garis gawang.<br><br>
+          
+                    Ukuran lapangan diperbolehkan bervariasi Aturan FIFA menerapkan standar lapangan sepak bola internasional adalah panjangnya 100-110 meter. Sementara lebarnya 64-75 meter. Ada pun lingkar tengah memiliki radius 9,15 meter. Sedangkan ukuran kotak penalti adalah 40,3 x 16,5 meter. Di dalam lapangan terdapat dua gawang yang dijaga oleh masing-masing kiper dimana gawang itu sendiri terdiri dari bingkai berukuran tinggi 8 kaki dan lebar 8 meter. Dan untuk ukuran bola, dari diameter bola sebesar 21 - 22,5 cm dan keliling lingkaran bola dengan minimal 68 cm dan maksimal 71 cm.</p>
+                  </div>
+            </div>
+        </div>  
+    </section>
+    <!-- contact -->
+    <section class="contact" id="contact">
+        <p>CONTACT :</p><br>
+        <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+            <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+            <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+            <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+        </div>
+    </section>
+
+    
+    <footer>
+        <p>bola.media</p>
+      </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

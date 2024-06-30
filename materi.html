@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>materi</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+</head>
+<style>
+    /* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 2rem;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --main-color: #134a91;
+    --second-color: #193457;
+}
+*::selection{
+    color: #fff;
+    background: var(--main-color);
+}
+section{
+    padding: 50px 10%;
+}
+img{
+    width: 100%;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+    padding: 15px 10%;
+    transition: 0.2s;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 60px;
+}
+.navbar{
+    display: flex;
+}
+.navbar a{
+    font-size: 1rem;
+    padding: 11px 20px;
+    color: var(--second-color);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+#menu-icon{
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url(foto/materilanding.png);
+    gap: 1rem;
+}
+.home-text{
+    flex: 1 1 17rem;
+}
+.home-img{
+    flex: 1 1 17rem;
+}
+.home-img img{
+    animation: animate 3s linear infinite;
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 80px;
+}
+@keyframes animate{
+    0%{
+        transform: translate(-11px, 0);
+    }
+    50%{
+        transform: translate(-0px, -11px);
+    }
+    100%{
+        transform: translate(-11px, 0);
+    }
+}
+.home-text span{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: white;
+}
+.home-text h1{
+    font-size: 3.2rem;
+    color: white;
+    font-weight: bolder;
+}
+.home-text h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: white;
+    text-transform: capitalize;
+    margin: 0.5rem 0 1.4rem;
+}
+.btn{
+    padding: 7px 16px;
+    border: 2px solid white;
+    border-radius: 40px;
+    color: white;
+    font-weight: 500;
+}
+.btn:hover{
+    background: #fff;
+    color: var(--second-color);
+}
+.heading{
+    text-align: center;
+}
+.heading span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--second-color);
+}
+.heading h1{
+    font-size: 2rem;
+    color: var(--main-color);
+}
+.content{
+    background: rgb(230, 229, 229);
+}
+.box{
+    position: relative;
+    width: 100%;
+    height: 110px;
+    background-color: #fdfdfd;
+    color: #134a91;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.box p{
+    padding-top: 40px;
+}
+.box img{
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  width: 85px;
+  height: auto;
+  float: left;
+}
+
+.box:hover{
+  transform: scale(105%);
+}
+
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: center;
+}
+.social a{
+    font-size: 27px;
+    margin: 0.5rem;
+}
+.social a .bx{
+    padding: 5px;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 50%;
+}
+.social a .bx:hover{
+    background: var(--main-color);
+}
+.links{
+    margin: 1rem 0 1rem;
+}
+.links a{
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--second-color);
+    padding: 1rem;
+}
+.links a:hover{
+    color: var(--main-color);
+}
+.contact p{
+    text-align: center;
+}
+
+footer {
+	background: linear-gradient(-4deg, #09264b,#134a91);
+    min-height: 30px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	z-index: 999;
+	}
+
+  footer p{
+    padding: 20px;
+  }
+
+@media (max-width: 1150px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 7%;
+    }
+    .home-text h1{
+        font-size: 3rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }  
+}
+
+@media (max-width: 991px) {
+    header{
+        padding: 18px 7%;
+    }
+    section{
+        padding: 50px 4%;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 11px 4%;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 4px 41px rgba(14 55 54 / 14%);
+        border-top: 2px solid var(--main-color);
+        transition: 0.2s;
+        text-align: center;
+    }
+    .navbar.active{
+        top: 100%;
+    }
+    .navbar a{
+        padding: 1.5rem;
+        display: block;
+        color: var(--second-color);
+    }
+    .home-text span{
+        font-size: 0.9rem;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .home-text h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:768px){
+    .home-text{
+        padding-top: inherit;
+    }
+    .shop-container{
+        margin-top: 0rem;
+    }
+    .shop-container .box{
+        margin-top: 10rem;
+    }
+    .heading h1{
+        font-size: 1.5rem;
+    }
+    .heading span{
+        font-size: 0.9rem;
+    }
+    .about{
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 472px) {
+    .box{
+        font-size: 11px;
+        padding: 10px;
+    }
+    .box img{
+        width: 65px;
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 463px) {
+    .links{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+</style>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <a href="#" class="logo"><img src="foto/bolamedia.png" alt=""></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="materi.html">Materi</a></li>
+            <li><a href="video.html">Video</a></li>
+        </ul>
+    </header>
+
+    <!-- home -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <span>PEMBELAJARAN</span>
+            <h1>MATERI</h1>
+            <h2>tentang<br>permainan sepakbola</h2>
+            <a href="#delivery" class="btn">learn more</a>
+        </div>
+        <div class="home-img">
+        </div>
+    </section>
+    <!-- delivery -->
+    <section class="delivery" id="delivery">
+        <div class="heading">
+            <span>MATERI</span>
+            <h1>BOLA MEDIA</h1>
+        </div>
+        <div class="container"></div>
+    </section>
+
+    <!-- content -->
+    <section class="content">
+        <div class="materi">  
+            <!-- box1 -->
+              <a href="penjelasan.html" style="text-decoration: none; color: #444040;">
+              <div class="box">
+                <img src="foto/1.png" alt="">
+                <p><h3>Pengertian Sepak Bola</h3></p>
+              </div>
+            </a>
+            <!-- box2 -->
+            <a href="sejarah.html" style="text-decoration: none; color: #444040;">
+              <div class="box">
+                <img src="foto/2.png" alt="">
+                <p><h3>Sejarah Sepak Bola</h3></p>
+              </div>
+            </a>
+              <!-- box3 -->
+              <a href="peraturan.html" style="text-decoration: none; color: #444040;">
+              <div class="box">
+                <img src="foto/3.png" alt="">
+                <p><h3>Peraturan Sepak Bola</h3></p>
+              </div>
+            </a>
+            <!-- box4 -->
+            <a href="teknikdasar.html" style="text-decoration: none; color: #444040;">
+              <div class="box">
+                <img src="foto/4.png" alt="">
+                <p><h3>Teknik Dasar Sepak Bola</h3></p>
+              </div>
+            </a>
+            <!-- box5 -->    
+            <a href="manfaat.html" style="text-decoration: none; color: #444040;">
+              <div class="box">
+                <img src="foto/5.png" alt="">
+                <p><h3>Manfaat Sepak Bola</h3></p>
+              </div>
+            </a>
+            </div>
+    </section>
+        <!-- contact -->
+        <section class="contact" id="contact">
+            <p>CONTACT :</p><br>
+            <div class="social">
+                <a href="https://www.facebook.com/profile.php?id=100093066128368&mibextid=ZbWKwL"><i class="bx bxl-facebook"></i></a>
+                <a href="https://x.com/bararaditia2008?t=fcRenAxOSypmiQ2jRCrBnA&s=08"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/baraa.radtyaa/"><i class="bx bxl-instagram"></i></a>
+                <a href="https:/bararaditia231@gmail.com"><i class="bx bx-envelope"></i></a>
+            </div>
+        </section>
+
+        <footer>
+            <p>bola.media</p>
+        </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
